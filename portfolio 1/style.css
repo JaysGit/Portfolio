@@ -1,0 +1,258 @@
+/* General Styles */ 
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #121212;
+  color: #fff;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #1a1a1a;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #f4a261;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav ul li a:hover, .active {
+  color: #f4a261;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: left;
+  padding: 0 10%;
+  background: url('https://source.unsplash.com/1600x900/?technology') no-repeat center center/cover;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.left-column {
+  flex: 1;
+}
+
+.right-column {
+  flex: 1;
+}
+
+.profile-photo {
+  width: 350px;
+  border-radius: 50%;
+  border: 5px solid #f4a261;
+}
+
+.highlight {
+  color: #f4a261;
+}
+
+.social-icons a {
+  margin: 10px;
+  text-decoration: none;
+  color: #f4a261;
+  font-weight: bold;
+}
+
+.hire-me {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #f4a261;
+  color: #121212;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* About, Skills, Projects & Contact Sections */
+section {
+  text-align: center;
+  padding: 80px 20px;
+  background-color: #1a1a1a;
+  margin: 50px auto;
+  width: 80%;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+section h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  color: #f4a261;
+}
+
+section p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* Skills List */
+#skills ul {
+  list-style: none;
+  padding: 0;
+}
+
+#skills ul li {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 20px;
+  background: #f4a261;
+  color: #121212;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+/* Projects */
+.project-card {
+  background: #222;
+  padding: 20px;
+  margin: 20px auto;
+  width: 80%;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.project-card h3 {
+  color: #f4a261;
+}
+
+/* Contact */
+.contact-info {
+  margin: 20px 0;
+}
+
+.contact-info p {
+  font-size: 18px;
+}
+
+.contact-form input, .contact-form textarea {
+  width: 80%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+}
+
+.contact-form button {
+  background: #f4a261;
+  padding: 10px 20px;
+  border: none;
+  color: #121212;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+/* CV Section */
+#cv {
+  text-align: center;
+  padding: 80px 20px;
+  background-color: #1a1a1a;
+}
+
+.cv-buttons a {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.view-btn {
+  background: #f4a261;
+  color: #121212;
+}
+
+.download-btn {
+  background: #00bcd4;
+  color: #fff;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #1a1a1a;
+}
+
+
+/*for js*/
+/* Scroll Reveal Animation */
+section, .project-card {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-in-out;
+}
+
+section.active-reveal, .project-card.active-reveal {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+.slide-left {
+  transform: translateX(-50px);
+}
+
+.slide-right {
+  transform: translateX(50px);
+}
+
+/* Typing Animation */
+.right-column h3 span {
+  border-right: 2px solid #f4a261;
+  padding-right: 5px;
+  animation: blinkCursor 0.7s infinite;
+}
+
+@keyframes blinkCursor {
+  0% { border-color: #f4a261; }
+  50% { border-color: transparent; }
+  100% { border-color: #f4a261; }
+}
+
+/* Project Card Hover Effect */
+.project-card:hover {
+  transform: scale(1.05);
+  transition: transform 0.4s ease-in-out;
+}
+
+/* Back to Top Button */
+#backToTop {
+  transition: all 0.4s ease-in-out;
+}
+
